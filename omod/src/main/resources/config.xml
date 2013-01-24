@@ -12,11 +12,14 @@
 		${project.parent.description}
 	</description>
 	<updateURL>https://modules.openmrs.org/modules/download/${project.parent.artifactId}/update.rdf</updateURL>
-	<require_version>${openMRSVersion}</require_version>
+	<require_version>1.8.2</require_version>
 	<!-- / Module Properties -->
+    <require_modules>
+        <require_module version="1.0.0">org.openmrs.module.authentication</require_module>
+        <require_module version="1.0.0">org.openmrs.module.webservices.rest</require_module>
+    </require_modules>
 
-	
-	<!-- Module Activator -->
+    <!-- Module Activator -->
 	<activator>${project.parent.groupId}.${project.parent.artifactId}.MuzimaAuthenticationActivator</activator>
 	
 	
